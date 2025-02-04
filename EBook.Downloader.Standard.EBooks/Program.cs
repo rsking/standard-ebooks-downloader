@@ -477,7 +477,7 @@ static async Task<EpubInfo> UpdateEpubInfoAsync(
                     string? type = default;
                     if (sets.TryGetValues(collection.Value, out var value))
                     {
-                        type = "sets";
+                        type = "#sets";
                     }
                     else if (series.TryGetValues(collection.Value, out value))
                     {
@@ -847,12 +847,12 @@ internal sealed partial class Program
     {
     }
 
-    [System.Text.RegularExpressions.GeneratedRegex("https://standardebooks.org/ebooks/(?<author>[-a-z0-9]+)/(?<book>[-a-z0-9]+)", System.Text.RegularExpressions.RegexOptions.ExplicitCapture, 1000)]
+    [System.Text.RegularExpressions.GeneratedRegex("/ebooks/(?<author>[-a-z0-9]+)/(?<book>[-a-z0-9]+)", System.Text.RegularExpressions.RegexOptions.ExplicitCapture, 1000)]
     private static partial System.Text.RegularExpressions.Regex BookRegex();
 
-    [System.Text.RegularExpressions.GeneratedRegex("https://standardebooks.org/ebooks/(?<author>[-a-z0-9]+)", System.Text.RegularExpressions.RegexOptions.ExplicitCapture, 1000)]
+    [System.Text.RegularExpressions.GeneratedRegex("/ebooks/(?<author>[-a-z0-9]+)", System.Text.RegularExpressions.RegexOptions.ExplicitCapture, 1000)]
     private static partial System.Text.RegularExpressions.Regex AuthorRegex();
 
-    [System.Text.RegularExpressions.GeneratedRegex("https://standardebooks.org/collections/(?<collection>[-a-z0-9]+)", System.Text.RegularExpressions.RegexOptions.ExplicitCapture, 1000)]
+    [System.Text.RegularExpressions.GeneratedRegex("/collections/(?<collection>[-a-z0-9]+)", System.Text.RegularExpressions.RegexOptions.ExplicitCapture, 1000)]
     private static partial System.Text.RegularExpressions.Regex CollectionsRegex();
 }
